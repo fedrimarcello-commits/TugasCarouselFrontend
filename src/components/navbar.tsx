@@ -11,6 +11,12 @@ const menus = [
 
 function Navbar() {
   const [activeMenu, setActiveMenu] = useState("beranda");
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleMenuClick(id: string) {
+    setActiveMenu(id);
+    setIsOpen(false);
+  }
 
   useEffect(() => {
     function handleScroll() {
@@ -37,7 +43,17 @@ function Navbar() {
           Grow<span>Store</span>
         </a>
 
-        <ul className={styles.menu}>
+        <button
+          className={styles.hamburger}
+          onClick={() => setIsOpen(!isOpen)}
+          aria-label="Buka menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={isOpen ? `${styles.menu} ${styles.menuOpen}` : styles.menu}>
           {menus.map((menu) => (
             <li key={menu.id}>
               <a
@@ -47,7 +63,7 @@ function Navbar() {
                     ? `${styles.link} ${styles.active}`
                     : styles.link
                 }
-                onClick={() => setActiveMenu(menu.id)}
+                onClick={() => handleMenuClick(menu.id)}
               >
                 {menu.label}
               </a>
