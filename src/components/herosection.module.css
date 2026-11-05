@@ -92,6 +92,50 @@
   image-rendering: pixelated;
 }
 
+.hero :global(.carousel-indicators) {
+  margin-bottom: 20px;
+}
+
+.hero :global(.carousel-indicators [data-bs-target]) {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border: 2px solid var(--white);
+  border-radius: 10px;
+  background: transparent;
+  opacity: 1;
+  transition: width 0.3s, background 0.3s;
+}
+
+.hero :global(.carousel-indicators .active) {
+  width: 30px;
+  border-color: var(--gold);
+  background: var(--gold);
+}
+
+.hero :global(.carousel-control-prev),
+.hero :global(.carousel-control-next) {
+  width: 80px;
+  opacity: 1;
+}
+
+.hero :global(.carousel-control-prev-icon),
+.hero :global(.carousel-control-next-icon) {
+  width: 44px;
+  height: 44px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.25);
+  background-size: 45%;
+  transition: background-color 0.2s;
+}
+
+.hero :global(.carousel-control-prev:hover .carousel-control-prev-icon),
+.hero :global(.carousel-control-next:hover .carousel-control-next-icon) {
+  border-color: var(--gold);
+  background-color: var(--gold);
+}
+
 @media (max-width: 992px) {
   .content {
     padding: 50px 80px;
@@ -132,5 +176,16 @@
   .imageBox {
     width: 150px;
     height: 150px;
+  }
+
+  .hero :global(.carousel-control-prev),
+  .hero :global(.carousel-control-next) {
+    width: 48px;
+  }
+
+  .hero :global(.carousel-control-prev-icon),
+  .hero :global(.carousel-control-next-icon) {
+    width: 34px;
+    height: 34px;
   }
 }
