@@ -1,0 +1,170 @@
+.section {
+  padding: 80px 20px;
+  scroll-margin-top: 70px;
+  text-align: center;
+}
+
+.title {
+  margin-bottom: 8px;
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
+.subtitle {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: var(--text-soft);
+}
+
+.list {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.card {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  border: 3px solid var(--sky);
+  border-radius: 18px;
+  background: var(--white);
+  box-shadow: 0 6px 0 #b5e3f7;
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.imageBox {
+  height: 140px;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: var(--sky-light);
+  color: var(--text-soft);
+  font-size: 14px;
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  image-rendering: pixelated;
+}
+
+.category {
+  align-self: flex-start;
+  margin-bottom: 6px;
+  padding: 2px 10px;
+  border-radius: 10px;
+  background: var(--sky-light);
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.name {
+  margin-bottom: 6px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--blue-dark);
+}
+
+.description {
+  flex: 1;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--gold-dark);
+}
+
+.button {
+  padding: 6px 18px;
+  border-radius: 20px;
+  background: var(--blue);
+  color: var(--white);
+  font-weight: 600;
+  box-shadow: 0 3px 0 var(--blue-dark);
+}
+
+.button:hover {
+  background: var(--sky);
+  color: var(--white);
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 16px;
+  }
+
+  .title {
+    font-size: 30px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .list {
+    gap: 16px;
+  }
+
+  .card {
+    width: calc(50% - 8px);
+    padding: 12px;
+  }
+
+  .imageBox {
+    height: 100px;
+  }
+
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+
+  .name {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+
+  .bottom {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+
+  .button {
+    text-align: center;
+  }
+}
