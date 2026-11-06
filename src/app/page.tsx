@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../components/navbar";
 import HeroSection from "../components/herosection";
 import ProductSection from "../components/productsection";
+import AdvantageSection from "../components/advantagesection";
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <main>
         <HeroSection></HeroSection>
         <ProductSection />
+        <AdvantageSection />
 
       </main>
     </div>
