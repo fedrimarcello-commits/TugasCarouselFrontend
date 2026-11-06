@@ -24,10 +24,18 @@ function Navbar() {
 
       menus.forEach((menu) => {
         const section = document.getElementById(menu.id);
-        if (section && window.scrollY >= section.offsetTop - 120) {
+        if (section && window.scrollY + window.innerHeight / 2 >= section.offsetTop) {
           current = menu.id;
         }
       });
+
+      const isBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 10;
+
+      if (isBottom) {
+        current = "kontak";
+      }
 
       setActiveMenu(current);
     }

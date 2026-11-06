@@ -12,7 +12,6 @@ function Footer() {
             Toko Jual Item Growtopia
           </p>
         </div>
-
       </div>
 
       <div className={styles.bottom}>

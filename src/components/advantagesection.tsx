@@ -26,10 +26,8 @@ function AdvantageSection() {
       <div className={styles.list}>
         {advantages.map((item) => (
           <div key={item.title} className={styles.card}>
-            <div>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.description}>{item.description}</p>
-            </div>
+            <h3 className={styles.cardTitle}>{item.title}</h3>
+            <p className={styles.description}>{item.description}</p>
           </div>
         ))}
       </div>

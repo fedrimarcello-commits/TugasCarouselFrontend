@@ -40,19 +40,6 @@
   border-color: var(--gold);
 }
 
-.icon {
-  width: 70px;
-  height: 70px;
-  margin: 0 auto 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: var(--gold);
-  box-shadow: 0 4px 0 var(--gold-dark);
-  font-size: 32px;
-}
-
 .cardTitle {
   margin-bottom: 8px;
   font-size: 20px;
@@ -87,19 +74,7 @@
 
   .card {
     width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 16px;
     padding: 16px;
-    text-align: left;
-  }
-
-  .icon {
-    width: 56px;
-    height: 56px;
-    margin: 0;
-    flex-shrink: 0;
-    font-size: 26px;
   }
 
   .cardTitle {
