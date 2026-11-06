@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import { Fredoka } from "next/font/google";
+import { Questrial } from "next/font/google";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 
-const fredoka = Fredoka({
+const questrial = Questrial({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-fredoka",
+  weight: "400",
+  variable: "--font-questrial",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={fredoka.variable}>{children}</body>
+      <body className={questrial.variable}>{children}</body>
     </html>
   );
 }

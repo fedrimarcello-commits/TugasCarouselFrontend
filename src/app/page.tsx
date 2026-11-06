@@ -4,6 +4,7 @@ import Navbar from "../components/navbar";
 import HeroSection from "../components/herosection";
 import ProductSection from "../components/productsection";
 import AdvantageSection from "../components/advantagesection";
+import Footer from "../components/footer";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
         <AdvantageSection />
 
       </main>
+      <Footer />
     </div>
   );
 }

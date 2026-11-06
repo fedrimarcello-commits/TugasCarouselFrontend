@@ -29,7 +29,7 @@ body {
 body {
   color: var(--text);
   background: var(--sky-light);
-  font-family: var(--font-fredoka), Arial, Helvetica, sans-serif;
+  font-family: "Century Gothic", var(--font-questrial), Verdana, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
